@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="action_sort">Sortieren</string>
+    <string name="action_sort_popularity">Sortiere nach Popularität</string>
+    <string name="action_sort_top_rated">Sortiere nach Bestbewertet</string>
+    <string name="hires_loading">Lade Hi-Res Poster</string>
+    <string name="label_original_title">Originaltitel</string>
+    <string name="label_rating">Bewertung</string>
+    <string name="label_release">Erschienen</string>
+    <string name="label_runtime">Laufzeit</string>
+    <string name="loading">Lädt...</string>
+    <string name="popular_movies">Populäre Filme</string>
+    <string name="swipe_up_to_see_details">Hochwischen um Details zu sehen</string>
+    <string name="runtime_format">%d min</string>
+    <string name="top_rated_movies">Bestbewertete Filme</string>
+    <string name="warning_no_connection_movies">Konnte Filme nicht abrufen :(\nBitte überprüfe deine Internetverbindung.</string>
+    <string name="warning_no_connection_movie">Konnte Film nicht abrufen :(\nBitte überprüfe deine Internetverbindung.</string>
+    <string name="highres_loading_failed">Poster konnte nicht geladen werden</string>
+</resources>

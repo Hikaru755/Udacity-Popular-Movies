@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="popular_movies">Popular Movies</string>
+    <string name="top_rated_movies">Top Rated Movies</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="swipe_up_to_see_details">Swipe up to see details</string>
+    <string name="loading">Loading…</string>
+    <string name="runtime_format">%d min</string>
+    <string name="rating_format" translatable="false">%.1f/10</string>
+    <string name="action_sort">Sort</string>
+    <string name="action_sort_popularity">Sort by popularity</string>
+    <string name="action_sort_top_rated">Sort by top rated</string>
+    <string name="label_rating">Rating</string>
+    <string name="label_original_title">Original Title</string>
+    <string name="label_runtime">Runtime</string>
+    <string name="label_release">Release</string>
+    <string name="hires_loading">Hi-Res poster loading…</string>
+    <string name="warning_no_connection_movies">Could not get movies :(\nPlease check your internet connection.</string>
+    <string name="warning_no_connection_movie">Could not get movie :(\nPlease check your internet connection.</string>
+    <string name="highres_loading_failed">Loading poster failed</string>
+</resources>
