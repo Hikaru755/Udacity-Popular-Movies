@@ -1,6 +1,8 @@
 package com.rrpictureproductions.udacity.popularmovies.model;
 
 import android.net.Uri;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import com.rrpictureproductions.udacity.popularmovies.network.TMDBClient;
 
@@ -9,7 +11,7 @@ import org.joda.time.LocalDate;
 /**
  * Created by robin on 06.09.2016.
  */
-public class Movie {
+public class Movie implements Parcelable {
     public int id;
     public String title;
     public String overview;
@@ -49,5 +51,59 @@ public class Movie {
                 .appendPath(poster_path.substring(1))
                 .appendQueryParameter("api_key", apiKey)
                 .build();
+    }
+
+    protected Movie(Parcel in) {
+        id = in.readInt();
+        title = in.readString();
+        overview = in.readString();
+        poster_path = in.readString();
+        adult = in.readByte() != 0;
+        genreIds = in.createIntArray();
+        original_title = in.readString();
+        original_language = in.readString();
+        backdrop_path = in.readString();
+        popularity = in.readDouble();
+        runtime = in.readInt();
+        tagline = in.readString();
+        vote_count = in.readInt();
+        video = in.readByte() != 0;
+        vote_average = in.readFloat();
+    }
+
+    public static final Creator<Movie> CREATOR = new Creator<Movie>() {
+        @Override
+        public Movie createFromParcel(Parcel in) {
+            return new Movie(in);
+        }
+
+        @Override
+        public Movie[] newArray(int size) {
+            return new Movie[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(id);
+        parcel.writeString(title);
+        parcel.writeString(overview);
+        parcel.writeString(poster_path);
+        parcel.writeByte((byte) (adult ? 1 : 0));
+        parcel.writeIntArray(genreIds);
+        parcel.writeString(original_title);
+        parcel.writeString(original_language);
+        parcel.writeString(backdrop_path);
+        parcel.writeDouble(popularity);
+        parcel.writeInt(runtime);
+        parcel.writeString(tagline);
+        parcel.writeInt(vote_count);
+        parcel.writeByte((byte) (video ? 1 : 0));
+        parcel.writeFloat(vote_average);
     }
 }
